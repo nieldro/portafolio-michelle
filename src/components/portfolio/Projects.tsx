@@ -10,6 +10,19 @@ import publicidad from "@/assets/proyecto-publicidad.jpg";
 import ecommerce from "@/assets/proyecto-ecommerce.jpg";
 import evento from "@/assets/proyecto-evento.jpg";
 import ilustracion from "@/assets/proyecto-ilustracion.jpg";
+import editorial2 from "@/assets/proyecto-editorial-2.jpg";
+import editorial3 from "@/assets/proyecto-editorial-3.jpg";
+import branding2 from "@/assets/proyecto-branding-2.jpg";
+import branding3 from "@/assets/proyecto-branding-3.jpg";
+import app2 from "@/assets/proyecto-app-2.jpg";
+import app3 from "@/assets/proyecto-app-3.jpg";
+import social2 from "@/assets/proyecto-social-2.jpg";
+import packaging2 from "@/assets/proyecto-packaging-2.jpg";
+import motion2 from "@/assets/proyecto-motion-2.jpg";
+import publicidad2 from "@/assets/proyecto-publicidad-2.jpg";
+import ecommerce2 from "@/assets/proyecto-ecommerce-2.jpg";
+import evento2 from "@/assets/proyecto-evento-2.jpg";
+import ilustracion2 from "@/assets/proyecto-ilustracion-2.jpg";
 import { ProjectModal } from "./ProjectModal";
 
 export type Project = {
@@ -258,6 +271,305 @@ export const projects: Project[] = [
     tags: ["Ilustración", "Procreate", "Editorial", "Print"],
     image: ilustracion,
     color: "from-orange-300/30 to-rose-400/30",
+  },
+  {
+    title: "Lóelido Fashion",
+    category: "Editorial",
+    year: "2024",
+    client: "Lóelido Magazine",
+    role: "Diseño editorial",
+    description:
+      "Editorial de moda atemporal con diagramación minimalista, fotografía de autor y un sistema tipográfico depurado en blanco y negro.",
+    challenge:
+      "Diseñar un especial de moda que se sintiera atemporal y se diferenciara del ruido visual de las revistas comerciales del sector.",
+    solution:
+      "Apostá por amplio espacio en blanco, una pareja tipográfica display + serif clásica, y una grilla flexible que respira en cada doble página.",
+    deliverables: ["48 pp. impresas", "Versión digital scrollable", "Sistema editorial replicable", "Plantillas de portada"],
+    results: [
+      { value: "+2.000", label: "Ejemplares" },
+      { value: "9", label: "Editoriales" },
+      { value: "100%", label: "Aprobación cliente" },
+      { value: "1", label: "Mención en Behance" },
+    ],
+    tags: ["Editorial", "InDesign", "Fashion", "Print"],
+    image: editorial2,
+    color: "from-stone-300/30 to-neutral-400/30",
+  },
+  {
+    title: "Cooldey Recetario",
+    category: "Editorial",
+    year: "2024",
+    client: "Cooldey Cocina",
+    role: "Diagramación + dirección de arte",
+    description:
+      "Libro de recetas de cocina contemporánea con fotografía cenital y tipografía serif cálida, impreso a 4 tintas en papel ahuesado.",
+    challenge:
+      "Convertir 60 recetas en un objeto físico deseable, fácil de seguir en la cocina y a la vez bello como pieza de mesa de centro.",
+    solution:
+      "Diagramación en grilla de 2 columnas con jerarquía clara entre ingredientes y pasos, fotografía cenital uniforme y un código cromático por capítulo.",
+    deliverables: ["Libro 192 pp.", "Cubierta con sobrecubierta", "Marcador de tela", "Versión PDF interactiva"],
+    results: [
+      { value: "+1.500", label: "Copias vendidas" },
+      { value: "60", label: "Recetas" },
+      { value: "4.8★", label: "Rating Goodreads" },
+      { value: "2", label: "Reimpresiones" },
+    ],
+    tags: ["Libro", "Diagramación", "Food", "Print"],
+    image: editorial3,
+    color: "from-amber-300/30 to-rose-300/30",
+  },
+  {
+    title: "Sainte Skincare",
+    category: "Branding",
+    year: "2025",
+    client: "Sainte Cosmetics",
+    role: "Identidad + dirección de arte",
+    description:
+      "Identidad para línea de skincare francesa minimalista. Logo, paleta rosa pastel, etiquetas y campaña de lanzamiento digital.",
+    challenge:
+      "Lanzar una marca premium en un mercado saturado con un presupuesto inicial limitado, transmitiendo lujo accesible y rigor cosmético.",
+    solution:
+      "Identidad minimalista con logotipo serif, paleta rosa empolvado + crema y etiquetas tipográficas tipo farmacia francesa contemporánea.",
+    deliverables: ["Logo + manual", "Etiquetas para 6 productos", "Sitio one-page", "Campaña digital de lanzamiento"],
+    results: [
+      { value: "+150%", label: "Ventas mes 1" },
+      { value: "6", label: "Productos" },
+      { value: "12K", label: "Seguidores IG" },
+      { value: "3", label: "Tiendas multimarca" },
+    ],
+    tags: ["Branding", "Skincare", "Packaging", "Web"],
+    image: branding2,
+    color: "from-pink-200/40 to-rose-300/30",
+  },
+  {
+    title: "Verde Hotel Boutique",
+    category: "Branding",
+    year: "2024",
+    client: "Verde Hotel Boutique",
+    role: "Identidad de marca",
+    description:
+      "Identidad para hotel boutique con foco en sostenibilidad. Logo monograma, papelería con foil dorado y señalética interior.",
+    challenge:
+      "Comunicar lujo discreto y compromiso ambiental sin caer en clichés ecológicos ni en estética corporativa de hotel internacional.",
+    solution:
+      "Monograma elegante, paleta verde bosque + dorado, papelería con foil y un sistema de señalética en madera grabada para los espacios físicos.",
+    deliverables: ["Logo + monograma", "Papelería completa", "Señalética interior", "Manual 60pp"],
+    results: [
+      { value: "+92%", label: "Ocupación" },
+      { value: "4.9★", label: "Booking score" },
+      { value: "1", label: "Premio diseño" },
+      { value: "20", label: "Habitaciones" },
+    ],
+    tags: ["Branding", "Hospitality", "Print", "Foil"],
+    image: branding3,
+    color: "from-emerald-700/30 to-amber-400/30",
+  },
+  {
+    title: "Calma Wellness App",
+    category: "UI/UX",
+    year: "2024",
+    client: "Calma Studio",
+    role: "Diseño UI/UX",
+    description:
+      "App de meditación y bienestar con sesiones guiadas. Diseño UI cálido, sistema de gradientes lavanda y prototipo interactivo en Figma.",
+    challenge:
+      "Diferenciar una app de meditación frente a referentes globales, ofreciendo una experiencia más cálida, latina y menos clínica.",
+    solution:
+      "Lenguaje visual orgánico con gradientes suaves, ilustraciones abstractas y micro-animaciones que acompañan la respiración del usuario.",
+    deliverables: ["40+ pantallas", "Prototipo Figma", "Design system", "Guía de animaciones"],
+    results: [
+      { value: "9.4/10", label: "Rating UX test" },
+      { value: "40+", label: "Pantallas" },
+      { value: "8", label: "Usuarios test" },
+      { value: "1°", label: "Concurso UX local" },
+    ],
+    tags: ["Figma", "UI", "Wellness", "Mobile"],
+    image: app2,
+    color: "from-purple-300/30 to-rose-300/30",
+  },
+  {
+    title: "Nexa Fintech",
+    category: "UI/UX",
+    year: "2025",
+    client: "Nexa Banking (proyecto académico)",
+    role: "UI Designer",
+    description:
+      "Dashboard financiero móvil con dark mode, visualización de gastos en tiempo real y flujos de transferencia simplificados.",
+    challenge:
+      "Hacer accesibles datos financieros complejos a usuarios jóvenes sin sacrificar densidad de información ni claridad visual.",
+    solution:
+      "Modo oscuro con acentos verde neón, gráficas custom de gran legibilidad y arquitectura de información jerárquica por prioridad de uso.",
+    deliverables: ["50+ pantallas", "Design system completo", "Prototipo high-fidelity", "Guía de componentes"],
+    results: [
+      { value: "9.5/10", label: "Calificación" },
+      { value: "50+", label: "Pantallas" },
+      { value: "92%", label: "Éxito en tareas" },
+      { value: "Top 3", label: "Concurso Fintech UX" },
+    ],
+    tags: ["Figma", "Fintech", "Dark Mode", "Dashboard"],
+    image: app3,
+    color: "from-emerald-500/30 to-slate-700/40",
+  },
+  {
+    title: "Pop Color Fashion",
+    category: "Social Media",
+    year: "2025",
+    client: "Pop Color Studio",
+    role: "Social media designer",
+    description:
+      "Grid editorial vibrante para marca de moda emergente. 90+ piezas, reels semanales y plantillas para el equipo interno.",
+    challenge:
+      "Construir un feed reconocible a primera vista en un mercado saturado, escalable a 3+ publicaciones semanales sin perder identidad.",
+    solution:
+      "Sistema de plantillas con paleta saturada amarillo-coral, tipografía display contundente y composiciones mixtas foto+ilustración.",
+    deliverables: ["+90 piezas IG/TikTok", "20 reels animados", "Plantillas Canva para equipo", "Guía de marca digital"],
+    results: [
+      { value: "+320%", label: "Engagement" },
+      { value: "+30K", label: "Nuevos seguidores" },
+      { value: "12", label: "Reels virales" },
+      { value: "+90", label: "Piezas" },
+    ],
+    tags: ["Social Media", "Fashion", "Reels", "Templates"],
+    image: social2,
+    color: "from-yellow-300/40 to-orange-400/30",
+  },
+  {
+    title: "Miel Permaliue",
+    category: "Packaging",
+    year: "2025",
+    client: "Permaliue Apicultura",
+    role: "Packaging + branding",
+    description:
+      "Packaging artesanal para miel premium de altura. Etiqueta con foil dorado, sello de garantía y caja para edición limitada.",
+    challenge:
+      "Comunicar el carácter artesanal y la trazabilidad del producto, justificando un precio premium frente a marcas industriales.",
+    solution:
+      "Etiqueta tipográfica con sello vintage, foil dorado y sistema de etiquetas secundarias que indican origen y temporada de cosecha.",
+    deliverables: ["Etiqueta principal", "Sello de garantía", "Caja edición limitada", "Etiquetas secundarias"],
+    results: [
+      { value: "+200%", label: "Ventas" },
+      { value: "5", label: "Tiendas gourmet" },
+      { value: "1", label: "Premio Dieline" },
+      { value: "98%", label: "Satisfacción" },
+    ],
+    tags: ["Packaging", "Foil", "Premium", "Artesanal"],
+    image: packaging2,
+    color: "from-amber-400/30 to-yellow-200/30",
+  },
+  {
+    title: "Documentary Title",
+    category: "Motion",
+    year: "2024",
+    client: "Estudio Independiente",
+    role: "Motion designer",
+    description:
+      "Secuencia de títulos animados para documental cinematográfico. Tipografía kinética, transiciones glitch y sonido sincronizado.",
+    challenge:
+      "Diseñar una secuencia que estableciera el tono crudo y nocturno del documental en menos de 90 segundos.",
+    solution:
+      "Tipografía kinética con efecto chromatic aberration, paleta teal-orange cinematográfica y transiciones sincronizadas a la banda sonora.",
+    deliverables: ["Opener 90s", "Lower thirds", "Cierre + créditos", "Versión sin texto para festivales"],
+    results: [
+      { value: "1", label: "Festival selección" },
+      { value: "+80K", label: "Views YouTube" },
+      { value: "90s", label: "Duración opener" },
+      { value: "5", label: "Lower thirds" },
+    ],
+    tags: ["After Effects", "Motion", "Cinema", "Titles"],
+    image: motion2,
+    color: "from-teal-500/30 to-orange-500/30",
+  },
+  {
+    title: "Strike Sneakers OOH",
+    category: "Publicidad",
+    year: "2025",
+    client: "Strike Sportwear",
+    role: "Dirección de arte",
+    description:
+      "Campaña outdoor para lanzamiento de zapatilla edición limitada. Vallas digitales en 5 ciudades + activación en redes.",
+    challenge:
+      "Generar deseo y conversación alrededor de un drop limitado de 2.000 unidades en menos de 2 semanas.",
+    solution:
+      "Concepto monocromo rojo intenso con producto centrado, claim de una sola palabra y cuenta regresiva integrada en vallas digitales.",
+    deliverables: ["12 vallas digitales", "Activación en RRSS", "Empaque del drop", "Landing del lanzamiento"],
+    results: [
+      { value: "Sold out", label: "En 36 hrs" },
+      { value: "5", label: "Ciudades" },
+      { value: "+450K", label: "Interacciones RRSS" },
+      { value: "+220%", label: "Tráfico web" },
+    ],
+    tags: ["OOH", "Campaña", "Sneakers", "Streetwear"],
+    image: publicidad2,
+    color: "from-red-500/30 to-pink-300/30",
+  },
+  {
+    title: "Palenta Furniture Store",
+    category: "E-commerce",
+    year: "2024",
+    client: "Palenta Diseño",
+    role: "UI Designer",
+    description:
+      "Tienda online de mobiliario premium con configurador de productos, checkout simplificado y app móvil complementaria.",
+    challenge:
+      "Vender mobiliario de alto ticket online requería transmitir confianza, calidad de materiales y facilidad de configuración.",
+    solution:
+      "Diseño editorial con fotografía ambientada, configurador visual de tapizados y maderas, y un checkout de 1 sola página optimizado.",
+    deliverables: ["Home + catálogo", "Configurador visual", "Checkout 1 paso", "App móvil iOS"],
+    results: [
+      { value: "+180%", label: "Ventas online" },
+      { value: "4.2%", label: "Conversión" },
+      { value: "−38%", label: "Bounce rate" },
+      { value: "2.1s", label: "Tiempo de carga" },
+    ],
+    tags: ["E-commerce", "Furniture", "Configurator", "Mobile"],
+    image: ecommerce2,
+    color: "from-stone-400/30 to-amber-200/30",
+  },
+  {
+    title: "Whisper Wedding",
+    category: "Evento",
+    year: "2024",
+    client: "Whisper Bodas",
+    role: "Branding de evento",
+    description:
+      "Suite de invitaciones, papelería y señalética para boda destino. Caligrafía moderna, paleta blush y detalles botánicos.",
+    challenge:
+      "Crear una identidad romántica pero contemporánea, que se sintiera personal y se aplicara coherentemente en 12+ piezas.",
+    solution:
+      "Pareja tipográfica caligrafía + serif modernista, paleta blush-arena con dorados sutiles, y una hoja de estilo aplicada a cada detalle.",
+    deliverables: ["Suite invitación + RSVP", "Programa ceremonia", "Señalética + menús", "Tarjetas de agradecimiento"],
+    results: [
+      { value: "200", label: "Invitados" },
+      { value: "12", label: "Piezas" },
+      { value: "100%", label: "Aprobación novios" },
+      { value: "+8", label: "Referidos directos" },
+    ],
+    tags: ["Wedding", "Caligrafía", "Print", "Evento"],
+    image: evento2,
+    color: "from-rose-200/40 to-amber-200/30",
+  },
+  {
+    title: "Cuentos del Bosque",
+    category: "Ilustración",
+    year: "2024",
+    client: "Editorial Pequeños Lectores",
+    role: "Ilustradora",
+    description:
+      "Libro infantil ilustrado en acuarela digital. 24 ilustraciones a doble página y portada para colección de cuentos clásicos.",
+    challenge:
+      "Reinterpretar cuentos clásicos infantiles con una estética cálida y contemporánea, diferenciada del look digital plano dominante.",
+    solution:
+      "Técnica acuarela digital con texturas reales escaneadas, paleta cálida primaveral y composiciones narrativas que invitan a buscar detalles.",
+    deliverables: ["24 ilustraciones doble página", "Portada y contraportada", "8 viñetas decorativas", "Versión para merchandising"],
+    results: [
+      { value: "+5.000", label: "Copias 1ra edición" },
+      { value: "24", label: "Ilustraciones" },
+      { value: "4.9★", label: "Reseñas Amazon" },
+      { value: "2", label: "Reimpresiones" },
+    ],
+    tags: ["Ilustración", "Acuarela", "Infantil", "Editorial"],
+    image: ilustracion2,
+    color: "from-green-300/30 to-amber-200/30",
   },
 ];
 
