@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Calendar, User, Briefcase, ArrowUpRight, X } from "lucide-react";
+import type { MouseEvent } from "react";
 import type { Project } from "./Projects";
 
 export const ProjectModal = ({
@@ -13,7 +14,7 @@ export const ProjectModal = ({
 }) => {
   if (!project) return null;
 
-  const scrollToContact = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToContact = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     onOpenChange(false);
     window.setTimeout(() => {
@@ -143,12 +144,13 @@ export const ProjectModal = ({
             </div>
             <a
               href="#contacto"
-              onClick={() => onOpenChange(false)}
+              onClick={scrollToContact}
               className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-ink text-ink-foreground font-semibold hover:bg-primary transition-colors shrink-0"
             >
               ¿Quieres algo así?
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
+          </div>
           </div>
         </div>
       </DialogContent>
