@@ -1,4 +1,4 @@
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Calendar, User, Briefcase, ArrowUpRight, X } from "lucide-react";
 import type { Project } from "./Projects";
 
@@ -12,42 +12,53 @@ export const ProjectModal = ({
   onOpenChange: (o: boolean) => void;
 }) => {
   if (!project) return null;
+
+  const scrollToContact = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    onOpenChange(false);
+    window.setTimeout(() => {
+      document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-6xl w-[96vw] max-h-[94vh] overflow-y-auto p-0 rounded-3xl border-0 bg-background [&>button]:hidden">
+      <DialogContent className="block left-1/2 top-4 translate-y-0 max-w-5xl w-[94vw] max-h-[calc(100vh-2rem)] overflow-y-auto p-0 rounded-2xl border border-border bg-background shadow-bold [&>button]:hidden">
         {/* Close */}
         <button
           onClick={() => onOpenChange(false)}
-          className="fixed sm:absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-background/90 backdrop-blur border border-border flex items-center justify-center hover:bg-ink hover:text-ink-foreground transition-colors shadow-soft"
+          className="sticky top-4 ml-auto mr-4 mt-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/95 shadow-soft backdrop-blur transition-colors hover:bg-ink hover:text-ink-foreground"
           aria-label="Cerrar"
         >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Hero */}
-        <div className={`relative aspect-[16/10] sm:aspect-[21/9] overflow-hidden bg-gradient-to-br ${project.color}`}>
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover animate-scale-in"
-          />
-        </div>
-
-        <div className="px-6 sm:px-16 py-12 sm:py-16 space-y-16">
-          {/* Title block */}
-          <header className="max-w-3xl animate-fade-in-up">
-            <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
+        <div className="px-5 pb-8 pt-2 sm:px-10 lg:px-14 lg:pb-14">
+          {/* Title block — separado de la imagen para que nada se monte encima */}
+          <header className="animate-fade-in-up border-b border-border pb-8 sm:pb-10">
+            <div className="mb-5 flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
               <span>{project.category}</span>
               <span className="w-8 h-px bg-primary/40" />
               <span className="text-muted-foreground">{project.year}</span>
             </div>
-            <h2 className="font-display text-4xl sm:text-6xl font-black leading-[1.05] tracking-tight">
+            <DialogTitle className="font-display text-4xl font-black leading-[1.05] tracking-normal text-foreground sm:text-6xl">
               {project.title}
-            </h2>
-            <p className="mt-8 text-xl text-muted-foreground leading-relaxed font-light">
+            </DialogTitle>
+            <DialogDescription className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
               {project.description}
-            </p>
+            </DialogDescription>
           </header>
+
+          {/* Imagen limpia, sin texto encima */}
+          <div className={`mt-8 overflow-hidden rounded-2xl bg-gradient-to-br ${project.color}`}>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="block aspect-[4/3] w-full object-cover sm:aspect-[16/9]"
+            />
+          </div>
+
+          <div className="space-y-12 pt-10 sm:space-y-14 sm:pt-12">
 
           {/* Meta row */}
           <div className="grid sm:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
