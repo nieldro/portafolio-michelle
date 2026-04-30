@@ -1,5 +1,5 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Calendar, Tag, User, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { Calendar, User, Briefcase, ArrowUpRight, X } from "lucide-react";
 import type { Project } from "./Projects";
 
 export const ProjectModal = ({
@@ -14,96 +14,131 @@ export const ProjectModal = ({
   if (!project) return null;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl w-[95vw] max-h-[92vh] overflow-y-auto p-0 rounded-3xl border-0">
-        <div className={`relative aspect-[16/9] overflow-hidden bg-gradient-to-br ${project.color}`}>
+      <DialogContent className="max-w-6xl w-[96vw] max-h-[94vh] overflow-y-auto p-0 rounded-3xl border-0 bg-background [&>button]:hidden">
+        {/* Close */}
+        <button
+          onClick={() => onOpenChange(false)}
+          className="fixed sm:absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-background/90 backdrop-blur border border-border flex items-center justify-center hover:bg-ink hover:text-ink-foreground transition-colors shadow-soft"
+          aria-label="Cerrar"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Hero */}
+        <div className={`relative aspect-[16/10] sm:aspect-[21/9] overflow-hidden bg-gradient-to-br ${project.color}`}>
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover animate-scale-in"
           />
-          <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur text-xs font-bold uppercase tracking-widest">
-            {project.category}
-          </div>
         </div>
 
-        <div className="p-6 sm:p-10 space-y-8">
-          <div className="animate-fade-in-up">
-            <h2 className="font-display text-4xl sm:text-5xl font-black leading-tight">
+        <div className="px-6 sm:px-16 py-12 sm:py-16 space-y-16">
+          {/* Title block */}
+          <header className="max-w-3xl animate-fade-in-up">
+            <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">
+              <span>{project.category}</span>
+              <span className="w-8 h-px bg-primary/40" />
+              <span className="text-muted-foreground">{project.year}</span>
+            </div>
+            <h2 className="font-display text-4xl sm:text-6xl font-black leading-[1.05] tracking-tight">
               {project.title}
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-8 text-xl text-muted-foreground leading-relaxed font-light">
               {project.description}
             </p>
+          </header>
+
+          {/* Meta row */}
+          <div className="grid sm:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            {[
+              { icon: User, label: "Cliente", value: project.client },
+              { icon: Calendar, label: "Año", value: project.year },
+              { icon: Briefcase, label: "Rol", value: project.role || "Diseño completo" },
+            ].map((m) => (
+              <div key={m.label} className="bg-background p-6">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground mb-2">
+                  <m.icon className="w-3.5 h-3.5" />
+                  {m.label}
+                </div>
+                <div className="font-display text-lg font-bold">{m.value}</div>
+              </div>
+            ))}
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <div className="p-4 rounded-2xl bg-muted/50">
-              <User className="w-4 h-4 text-primary mb-2" />
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Cliente</div>
-              <div className="font-semibold mt-1">{project.client}</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-muted/50">
-              <Calendar className="w-4 h-4 text-primary mb-2" />
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Año</div>
-              <div className="font-semibold mt-1">{project.year}</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-muted/50">
-              <Tag className="w-4 h-4 text-primary mb-2" />
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Rol</div>
-              <div className="font-semibold mt-1">{project.role || "Diseño completo"}</div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          {/* Reto + Solución */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <div>
-              <h3 className="font-display text-2xl font-bold mb-4">El reto</h3>
-              <p className="text-muted-foreground leading-relaxed">{project.challenge}</p>
+              <div className="text-xs uppercase tracking-[0.25em] text-primary font-bold mb-4">
+                01 · El reto
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/80">{project.challenge}</p>
             </div>
             <div>
-              <h3 className="font-display text-2xl font-bold mb-4">La solución</h3>
-              <p className="text-muted-foreground leading-relaxed">{project.solution}</p>
+              <div className="text-xs uppercase tracking-[0.25em] text-accent font-bold mb-4">
+                02 · La solución
+              </div>
+              <p className="text-lg leading-relaxed text-foreground/80">{project.solution}</p>
             </div>
           </div>
 
+          {/* Entregables */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <h3 className="font-display text-2xl font-bold mb-4">Entregables</h3>
-            <ul className="grid sm:grid-cols-2 gap-3">
-              {project.deliverables.map((d) => (
-                <li key={d} className="flex items-start gap-3 p-3 rounded-xl bg-muted/30">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{d}</span>
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground font-bold mb-6">
+              03 · Entregables
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-x-12 gap-y-1 divide-y divide-border sm:divide-y-0">
+              {project.deliverables.map((d, i) => (
+                <li key={d} className="flex items-baseline gap-4 py-4 border-b border-border">
+                  <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-base font-medium">{d}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            {project.results.map((r) => (
-              <div key={r.label} className="p-5 rounded-2xl bg-ink text-ink-foreground text-center">
-                <div className="font-display text-3xl font-black text-gradient">{r.value}</div>
-                <div className="text-xs uppercase tracking-widest text-ink-foreground/70 mt-1">
-                  {r.label}
+          {/* Resultados */}
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground font-bold mb-6">
+              04 · Resultados
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10 rounded-3xl overflow-hidden">
+              {project.results.map((r) => (
+                <div key={r.label} className="bg-ink text-ink-foreground p-6 sm:p-8 text-center">
+                  <div className="font-display text-4xl sm:text-5xl font-black text-gradient leading-none">
+                    {r.value}
+                  </div>
+                  <div className="text-[11px] uppercase tracking-widest text-ink-foreground/60 mt-3">
+                    {r.label}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-2 pt-4 border-t border-border animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-            {project.tags.map((t) => (
-              <span key={t} className="px-3 py-1.5 text-xs rounded-full bg-secondary font-medium">
-                #{t}
-              </span>
-            ))}
+          {/* Tags + CTA */}
+          <div className="pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((t) => (
+                <span
+                  key={t}
+                  className="px-3 py-1.5 text-xs rounded-full border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors font-medium"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+            <a
+              href="#contacto"
+              onClick={() => onOpenChange(false)}
+              className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-ink text-ink-foreground font-semibold hover:bg-primary transition-colors shrink-0"
+            >
+              ¿Quieres algo así?
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
           </div>
-
-          <a
-            href="#contacto"
-            onClick={() => onOpenChange(false)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-hero text-primary-foreground font-semibold shadow-soft hover:shadow-glow transition-all"
-          >
-            ¿Quieres algo así? Hablemos
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
         </div>
       </DialogContent>
     </Dialog>
