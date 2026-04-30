@@ -311,46 +311,45 @@ export const Projects = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filtered.map((p, i) => (
             <button
               key={p.title}
               onClick={() => openProject(p)}
-              className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${p.color} p-3 transition-all hover:-translate-y-2 duration-500 text-left animate-fade-in-up`}
-              style={{ marginTop: i % 2 === 1 ? "2.5rem" : "0", animationDelay: `${i * 60}ms`, opacity: 0 }}
+              className="group flex flex-col text-left animate-fade-in-up focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 rounded-3xl"
+              style={{ animationDelay: `${i * 60}ms`, opacity: 0 }}
             >
-              <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-ink">
+              <div className={`relative overflow-hidden rounded-3xl aspect-[4/3] bg-gradient-to-br ${p.color}`}>
                 <img
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
                   width={1024}
                   height={1024}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors duration-500 flex items-center justify-center">
-                  <span className="px-5 py-2 rounded-full bg-background text-foreground text-sm font-bold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    Ver caso de estudio
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-background flex items-center justify-center shadow-soft">
-                  <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
-                </div>
               </div>
-              <div className="p-5 sm:p-6 flex flex-col gap-3">
+              <div className="pt-6 flex flex-col gap-3">
                 <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-wider">
                   <span className="text-primary">{p.category}</span>
                   <span className="text-muted-foreground">{p.year}</span>
                 </div>
-                <h3 className="font-display text-2xl sm:text-3xl font-bold">{p.title}</h3>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold leading-tight group-hover:text-primary transition-colors">
+                    {p.title}
+                  </h3>
+                  <span className="shrink-0 mt-1 w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:bg-ink group-hover:text-ink-foreground group-hover:border-ink transition-colors">
+                    <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
+                  </span>
+                </div>
                 <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
                   {p.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
+                <div className="flex flex-wrap gap-2 mt-1">
                   {p.tags.slice(0, 3).map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 text-xs rounded-full bg-background/60 backdrop-blur border border-border"
+                      className="px-3 py-1 text-xs rounded-full bg-secondary text-secondary-foreground"
                     >
                       {t}
                     </span>
