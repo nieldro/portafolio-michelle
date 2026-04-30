@@ -5,6 +5,8 @@ import { Projects } from "@/components/portfolio/Projects";
 import { About } from "@/components/portfolio/About";
 import { Services } from "@/components/portfolio/Services";
 import { Contact } from "@/components/portfolio/Contact";
+import { Loader } from "@/components/portfolio/Loader";
+import { Testimonials } from "@/components/portfolio/Testimonials";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -23,15 +25,19 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Marquee />
-      <Projects />
-      <About />
-      <Services />
-      <Contact />
-    </main>
+    <>
+      <Loader />
+      <main className="min-h-screen bg-background">
+        <Navbar />
+        <Hero />
+        <Marquee />
+        <Projects />
+        <Testimonials />
+        <About />
+        <Services />
+        <Contact />
+      </main>
+    </>
   );
 };
 
