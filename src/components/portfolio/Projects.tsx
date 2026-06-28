@@ -25,6 +25,16 @@ import evento2 from "@/assets/proyecto-evento-2.jpg";
 import ilustracion2 from "@/assets/proyecto-ilustracion-2.jpg";
 import { ProjectModal } from "./ProjectModal";
 
+const brumaHouse = "/__l5e/assets-v1/e7f1022a-9f8e-4e43-9f48-e4a31b8e41fc/pieza-promocional-03.png";
+const heladelica = "/__l5e/assets-v1/37db52d0-c1e-4d89-bfac-15eb6ec3134f/pieza-promocional-04.png";
+const ferrariIcons = "/__l5e/assets-v1/f7a5044f-45cb-4625-a150-ebba1514eb41/poster-02.jpeg";
+const mitchMuCherry = "/__l5e/assets-v1/f537cbd0-43be-4ddd-bf44-0025aff9b2a9/pieza-promocional-01.png";
+const mitchMuTones = "/__l5e/assets-v1/d98ca0c8-a2ba-4098-9a37-efa5f1271429/pieza-promocional-02.png";
+const kaomiArcana = "/__l5e/assets-v1/a5acd706-c52c-4bc2-ad8a-34476ddec589/empaque-01.png";
+const taironsVodka = "/__l5e/assets-v1/222989f6-7207-4ec4-a1cf-2303f20150ed/empaque-02.png";
+const ecoVidaFolleto = "/__l5e/assets-v1/234e8b81-105f-495b-9eac-c4b5795fbb8b/folleto-02-page-1.jpg";
+const ferrari288Poster = "/__l5e/assets-v1/42b1cd0d-03f6-46d1-881d-a58963aeb194/poster-01-page-1.jpg";
+
 export type Project = {
   title: string;
   category: string;
@@ -42,6 +52,213 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Bruma House · Poltronas",
+    category: "Publicidad",
+    year: "2025",
+    client: "Bruma House",
+    role: "Diseño publicitario",
+    description:
+      "Pieza promocional para mobiliario con estética editorial, enfoque en producto premium y una narrativa visual suave orientada a venta.",
+    challenge:
+      "Comunicar elegancia, confort y valor percibido en una sola pieza digital, manteniendo legibilidad y atractivo comercial sin saturar la composición.",
+    solution:
+      "Construí una composición con paleta blush, tipografía serif refinada, formas orgánicas y una escena ambientada que dirige toda la atención hacia la poltrona protagonista.",
+    deliverables: ["Pieza promocional principal", "Adaptación para redes", "Sistema visual para campañas", "Dirección de arte del producto"],
+    results: [
+      { value: "1", label: "Pieza hero" },
+      { value: "100%", label: "Foco en producto" },
+      { value: "Soft", label: "Estilo visual" },
+      { value: "Premium", label: "Percepción" },
+    ],
+    tags: ["Publicidad", "Mobiliario", "Photoshop", "Dirección de arte"],
+    image: brumaHouse,
+    color: "from-rose-200/40 to-stone-200/30",
+  },
+  {
+    title: "Heladélica · Sabor Pistacho",
+    category: "Publicidad",
+    year: "2025",
+    client: "Heladélica",
+    role: "Diseño de campaña",
+    description:
+      "Pieza de lanzamiento para nuevo sabor de helado artesanal con ambientación fresca, color sensorial y comunicación directa del producto.",
+    challenge:
+      "Presentar un nuevo sabor de manera apetecible y memorable, generando deseo inmediato y una identidad visual coherente con una marca artesanal.",
+    solution:
+      "Desarrollé una pieza con paleta verde pistacho, fotografía de alto impacto, jerarquía tipográfica clara y elementos naturales que refuerzan frescura y origen.",
+    deliverables: ["Key visual de campaña", "Pieza para pauta digital", "Versión para historias", "Sistema de color por sabores"],
+    results: [
+      { value: "Nuevo", label: "Lanzamiento" },
+      { value: "1", label: "Sabor destacado" },
+      { value: "Fresh", label: "Concepto" },
+      { value: "Alto", label: "Impacto visual" },
+    ],
+    tags: ["Publicidad", "Food Design", "Campaña", "Photoshop"],
+    image: heladelica,
+    color: "from-lime-200/40 to-green-200/30",
+  },
+  {
+    title: "MitchMu · Cherry Editorial",
+    category: "Publicidad",
+    year: "2025",
+    client: "MitchMu",
+    role: "Dirección de arte + retoque",
+    description:
+      "Visual promocional de producto cosmético con enfoque sensorial, acabado glossy y una composición inspirada en el universo cromático de la cereza.",
+    challenge:
+      "Hacer que un solo tono transmitiera personalidad de marca y textura de producto, equilibrando estética beauty y lectura comercial.",
+    solution:
+      "Usé una puesta en escena minimalista, color coordinado entre labial y fruta, brillos controlados y una composición central que resalta el empaque.",
+    deliverables: ["Hero visual de producto", "Pieza para feed", "Adaptación vertical", "Dirección cromática"],
+    results: [
+      { value: "1", label: "Tono protagonista" },
+      { value: "Beauty", label: "Lenguaje visual" },
+      { value: "Glossy", label: "Acabado" },
+      { value: "Premium", label: "Look & feel" },
+    ],
+    tags: ["Cosmética", "Publicidad", "Beauty", "Retoque"],
+    image: mitchMuCherry,
+    color: "from-pink-200/40 to-rose-300/30",
+  },
+  {
+    title: "MitchMu · Colección de tonos",
+    category: "Social Media",
+    year: "2025",
+    client: "MitchMu",
+    role: "Diseño para redes",
+    description:
+      "Pieza comparativa de tonos para colección de labiales, pensada para comunicar variedad, universo cromático y atributos del producto de forma rápida.",
+    challenge:
+      "Mostrar varias referencias en una misma composición sin perder orden, claridad ni atractivo visual para redes sociales.",
+    solution:
+      "Organicé la información con una estructura vertical limpia, swatches asociados a sabores/tonos y una jerarquía visual que hace fácil escanear cada referencia.",
+    deliverables: ["Post informativo", "Carrusel base", "Sistema para tonos", "Plantilla editable"],
+    results: [
+      { value: "4", label: "Tonos" },
+      { value: "1", label: "Sistema visual" },
+      { value: "Claro", label: "Escaneo visual" },
+      { value: "Escalable", label: "Formato" },
+    ],
+    tags: ["Social Media", "Cosmética", "Templates", "Producto"],
+    image: mitchMuTones,
+    color: "from-rose-200/40 to-orange-200/30",
+  },
+  {
+    title: "Ferrari · The Icons of the 80s",
+    category: "Publicidad",
+    year: "2025",
+    client: "Proyecto conceptual Hot Wheels",
+    role: "Diseño de póster",
+    description:
+      "Afiche promocional con estética retro para celebrar modelos icónicos de Ferrari de los años 80, con composición dinámica y alto impacto cromático.",
+    challenge:
+      "Reunir varios vehículos en una sola pieza sin perder jerarquía, manteniendo una atmósfera nostálgica y coleccionable.",
+    solution:
+      "Diseñé un póster de fuerte presencia roja, con tipografía bold, superposición de modelos y tratamiento visual inspirado en memorabilia automotriz.",
+    deliverables: ["Póster principal", "Arte para impresión", "Versión digital", "Composición de colección"],
+    results: [
+      { value: "80s", label: "Concepto" },
+      { value: "4", label: "Autos destacados" },
+      { value: "Retro", label: "Estética" },
+      { value: "Bold", label: "Tipografía" },
+    ],
+    tags: ["Poster Design", "Automotriz", "Publicidad", "Print"],
+    image: ferrariIcons,
+    color: "from-red-500/30 to-orange-300/20",
+  },
+  {
+    title: "Ferrari 288 GTO · Race Poster",
+    category: "Publicidad",
+    year: "2025",
+    client: "Proyecto conceptual Hot Wheels",
+    role: "Diseño gráfico publicitario",
+    description:
+      "Póster enfocado en el Ferrari 288 GTO con una lectura más directa de producto, inspirado en afiches de competencia y coleccionismo.",
+    challenge:
+      "Crear una pieza de un solo modelo que conservara fuerza visual y narrativa sin depender de múltiples elementos complementarios.",
+    solution:
+      "Aposté por una composición limpia con protagonismo total del vehículo, tipografía extendida y una estética deportiva que remite a carreras y colección.",
+    deliverables: ["Póster vertical", "Versión print", "Adaptación para display", "Arte promocional"],
+    results: [
+      { value: "288", label: "Modelo" },
+      { value: "1984", label: "Referencia" },
+      { value: "Retro", label: "Look visual" },
+      { value: "Hero", label: "Producto" },
+    ],
+    tags: ["Poster", "Hot Wheels", "Automotriz", "Publicidad"],
+    image: ferrari288Poster,
+    color: "from-red-400/30 to-neutral-200/20",
+  },
+  {
+    title: "EcoVida Market · Folleto Comercial",
+    category: "Editorial",
+    year: "2025",
+    client: "EcoVida Market",
+    role: "Diseño editorial",
+    description:
+      "Folleto corporativo de dos páginas para marca eco-sostenible, con diagramación informativa, mensajes de valor y beneficios del producto.",
+    challenge:
+      "Ordenar información institucional, comercial y promocional en un formato breve, visualmente amable y fácil de leer.",
+    solution:
+      "Diseñé una pieza editorial con bloques bien jerarquizados, paleta natural, llamadas de descuento y una narrativa enfocada en bienestar y sostenibilidad.",
+    deliverables: ["Folleto 2 páginas", "Portada comercial", "Página informativa", "Arte listo para impresión"],
+    results: [
+      { value: "2", label: "Páginas" },
+      { value: "Eco", label: "Enfoque" },
+      { value: "Claro", label: "Sistema informativo" },
+      { value: "Print", label: "Formato" },
+    ],
+    tags: ["Editorial", "Folleto", "InDesign", "Print"],
+    image: ecoVidaFolleto,
+    color: "from-green-200/40 to-lime-100/30",
+  },
+  {
+    title: "Kaomi Arcana · Packaging conceptual",
+    category: "Packaging",
+    year: "2025",
+    client: "Kaomi Arcana",
+    role: "Diseño de empaque",
+    description:
+      "Empaque conceptual de estética gótica para producto premium, con estructura tipo ataúd, patrones oscuros y un acabado visual coleccionable.",
+    challenge:
+      "Diseñar un empaque memorable y coherente con una narrativa de marca oscura, cuidando forma, ornamentación y presencia en exhibición.",
+    solution:
+      "Desarrollé una estructura diferenciadora, un sistema ornamental en tonos vino y detalles gráficos que refuerzan el carácter místico de la marca.",
+    deliverables: ["Estructura del empaque", "Frente y reverso", "Patrón gráfico", "Mockup de presentación"],
+    results: [
+      { value: "Concept", label: "Propuesta" },
+      { value: "Premium", label: "Posicionamiento" },
+      { value: "1", label: "Forma icónica" },
+      { value: "Dark", label: "Universo visual" },
+    ],
+    tags: ["Packaging", "Conceptual", "Brand Experience", "Mockup"],
+    image: kaomiArcana,
+    color: "from-rose-900/30 to-stone-800/30",
+  },
+  {
+    title: "Tairons · El vodka de los dioses",
+    category: "Packaging",
+    year: "2025",
+    client: "Tairons",
+    role: "Packaging + storytelling visual",
+    description:
+      "Diseño de empaque para vodka premium inspirado en la cultura Tairona, con gráfica ornamental, storytelling y exhibición de alto valor percibido.",
+    challenge:
+      "Crear un empaque culturalmente evocador, llamativo en anaquel y al mismo tiempo funcional para comunicar producto, origen e identidad.",
+    solution:
+      "Combiné una estructura de exhibición visible, ilustración ornamental vibrante, símbolos solares y una narrativa escrita integrada al reverso del empaque.",
+    deliverables: ["Caja exhibidora", "Diseño frontal y posterior", "Sistema ornamental", "Presentación de marca"],
+    results: [
+      { value: "750 ml", label: "Presentación" },
+      { value: "Premium", label: "Segmento" },
+      { value: "Cultural", label: "Narrativa" },
+      { value: "Alto", label: "Valor visual" },
+    ],
+    tags: ["Packaging", "Bebidas", "Ilustración", "Brand Story"],
+    image: taironsVodka,
+    color: "from-amber-300/30 to-cyan-300/20",
+  },
   {
     title: "Floresía Magazine",
     category: "Editorial",
