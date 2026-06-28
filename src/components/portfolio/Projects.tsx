@@ -26,7 +26,7 @@ import ilustracion2 from "@/assets/proyecto-ilustracion-2.jpg";
 import { ProjectModal } from "./ProjectModal";
 
 const brumaHouse = "/__l5e/assets-v1/e7f1022a-9f8e-4e43-9f48-e4a31b8e41fc/pieza-promocional-03.png";
-const heladelica = "/__l5e/assets-v1/37db52d0-c1e-4d89-bfac-15eb6ec3134f/pieza-promocional-04.png";
+const heladelica = "/__l5e/assets-v1/37db52d0-c1e4-4d89-bfac-15eb6ec3134f/pieza-promocional-04.png";
 const ferrariIcons = "/__l5e/assets-v1/f7a5044f-45cb-4625-a150-ebba1514eb41/poster-02.jpeg";
 const mitchMuCherry = "/__l5e/assets-v1/f537cbd0-43be-4ddd-bf44-0025aff9b2a9/pieza-promocional-01.png";
 const mitchMuTones = "/__l5e/assets-v1/d98ca0c8-a2ba-4098-9a37-efa5f1271429/pieza-promocional-02.png";
