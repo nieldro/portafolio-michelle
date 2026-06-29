@@ -264,27 +264,96 @@ export const projects: Project[] = [
     color: "from-amber-300/30 to-cyan-300/20",
   },
   {
-    title: "Floresía Magazine",
-    category: "Editorial",
+    title: "Kaomi Arcana · Papelería ritual",
+    category: "Branding",
     year: "2025",
-    client: "Editorial Floresía Independiente",
-    role: "Dirección de arte + Diagramación",
+    client: "Kaomi Arcana",
+    role: "Identidad + papelería",
     description:
-      "Revista trimestral sobre botánica y cultura urbana. Diseño completo de diagramación, portada y sistema tipográfico para 4 ediciones.",
+      "Sistema completo de papelería ritual con estética arcana: empaques, sobres con sello de cera, business cards, bolsas y papel patrón.",
     challenge:
-      "Crear un objeto editorial deseable en una era digital, que conjugara rigor periodístico con sensibilidad visual contemporánea.",
+      "Trasladar el universo místico de la marca a un sistema de papelería coherente, lujoso y con presencia física fuerte.",
     solution:
-      "Construí un sistema modular de retícula con 12 columnas, una pareja tipográfica entre serif moderna y sans humanista, y un manejo cromático estacional inspirado en pigmentos naturales.",
-    deliverables: ["4 ediciones impresas (96 pp.)", "Sistema editorial replicable", "Plantillas para colaboradores", "Versión digital interactiva"],
+      "Construí un sistema en torno al símbolo arcano, paleta vino + negro, sellos de cera roja y un patrón ornamental aplicado a todo el ecosistema.",
+    deliverables: ["Carpeta + sobre con sello", "Tarjetas y empaques", "Bolsa retail", "Papel patrón y caja premium"],
     results: [
-      { value: "+3.500", label: "Tiraje vendido" },
-      { value: "12", label: "Puntos de venta" },
-      { value: "94%", label: "Reseñas positivas" },
-      { value: "2", label: "Premios locales" },
+      { value: "9", label: "Piezas del sistema" },
+      { value: "Premium", label: "Posicionamiento" },
+      { value: "Ritual", label: "Concepto" },
+      { value: "1", label: "Sistema unificado" },
     ],
-    tags: ["InDesign", "Diagramación", "Tipografía", "Print"],
-    image: editorial,
-    color: "from-primary/20 to-accent/20",
+    tags: ["Branding", "Papelería", "Sellos", "Print"],
+    image: papeleriaKaomi,
+    color: "from-rose-900/30 to-stone-800/30",
+  },
+  {
+    title: "Astral · Papelería corporativa",
+    category: "Branding",
+    year: "2025",
+    client: "Astral Studio",
+    role: "Branding + papelería",
+    description:
+      "Sistema de papelería corporativa minimalista en púrpura profundo y plata: folder, carta, sobre, caja regalo, etiquetas y papel patrón.",
+    challenge:
+      "Crear una identidad sobria con presencia premium, capaz de funcionar en presentaciones B2B y en empaques de obsequio para clientes.",
+    solution:
+      "Símbolo abstracto en forma de estrella circundada, paleta púrpura + blanco roto, mockups de papelería y un patrón decorativo escalable.",
+    deliverables: ["Folder presentación", "Sobre + carta", "Caja regalo", "Etiquetas y papel patrón"],
+    results: [
+      { value: "9", label: "Piezas" },
+      { value: "Premium", label: "Posicionamiento" },
+      { value: "1", label: "Sistema escalable" },
+      { value: "B2B", label: "Aplicación" },
+    ],
+    tags: ["Branding", "Papelería", "Corporate", "Print"],
+    image: papeleriaAstral,
+    color: "from-purple-700/30 to-slate-800/30",
+  },
+  {
+    title: "AlgoQuest · Plataforma educativa",
+    category: "UI/UX",
+    year: "2025",
+    client: "Daniel Páez",
+    role: "Diseño UI + branding digital",
+    description:
+      "Plataforma gamificada para aprender algoritmos de ordenamiento jugando. Diseño de interfaz dark mode, mascota propia y sistema de niveles.",
+    challenge:
+      "Hacer que un tema técnico (algoritmos) se sintiera amigable y motivante para estudiantes, con una ruta de aprendizaje clara.",
+    solution:
+      "Interfaz dark mode con acentos verde neón, mascota búho como guía, barra de progreso por módulos y tarjetas de niveles desbloqueables.",
+    deliverables: ["Home + rutas de aprendizaje", "Sistema de niveles", "Mascota e iconografía", "Componentes UI completos"],
+    results: [
+      { value: "9", label: "Módulos" },
+      { value: "100%", label: "Niveles desbloqueables" },
+      { value: "Dark", label: "Mode" },
+      { value: "Edu", label: "Vertical" },
+    ],
+    tags: ["UI/UX", "EdTech", "Dark Mode", "Gamificación"],
+    image: algoquestImg,
+    color: "from-emerald-500/30 to-slate-800/30",
+  },
+  {
+    title: "Valorant · Web personalizada",
+    category: "UI/UX",
+    year: "2025",
+    client: "Proyecto personal",
+    role: "Diseño UI + maquetación",
+    description:
+      "Sitio web fan-made para Valorant con fichas de agentes, galería de skins y navegación inmersiva inspirada en la estética gamer del juego.",
+    challenge:
+      "Replicar la atmósfera competitiva del juego en una web fluida, manteniendo legibilidad y jerarquía sobre fondos complejos.",
+    solution:
+      "Composición asimétrica con tipografía glitch, paleta púrpura/teal, tarjetas de habilidades (Q/E/C/X) y navegación lateral vertical.",
+    deliverables: ["Home + ficha de agente", "Galería de colección", "Sistema de navegación", "Componentes UI gamer"],
+    results: [
+      { value: "1", label: "Sitio completo" },
+      { value: "Gamer", label: "Lenguaje visual" },
+      { value: "Inmersivo", label: "Diseño" },
+      { value: "Web", label: "Formato" },
+    ],
+    tags: ["UI/UX", "Gaming", "Web Design", "Dark Mode"],
+    image: valorantImg,
+    color: "from-purple-600/30 to-indigo-900/30",
   },
   {
     title: "Raíz Café Orgánico",
@@ -308,29 +377,6 @@ export const projects: Project[] = [
     tags: ["Branding", "Packaging", "Illustrator", "Manual"],
     image: raiz,
     color: "from-emerald-500/20 to-amber-500/20",
-  },
-  {
-    title: "Pulse Music App",
-    category: "UI/UX",
-    year: "2025",
-    client: "Proyecto académico · Compensar",
-    role: "Diseño UI/UX",
-    description:
-      "Diseño de interfaz para app de música streaming con foco en artistas emergentes latinoamericanos. 60+ pantallas y prototipo funcional.",
-    challenge:
-      "Crear una experiencia de descubrimiento musical que no compitiera por catálogo, sino por curaduría afectiva y cercanía con el artista.",
-    solution:
-      "Diseñé una arquitectura basada en 'salas' temáticas curadas, con un sistema visual oscuro, gradientes neón y micro-interacciones que celebran cada reproducción.",
-    deliverables: ["60+ pantallas en Figma", "Sistema de diseño completo", "Prototipo interactivo", "User flows y wireframes"],
-    results: [
-      { value: "9.2/10", label: "Calificación final" },
-      { value: "85%", label: "Tasa de éxito UX test" },
-      { value: "5", label: "Usuarios test" },
-      { value: "60+", label: "Pantallas" },
-    ],
-    tags: ["Figma", "UI Design", "Prototipado", "Design System"],
-    image: app,
-    color: "from-pink-500/30 to-orange-500/30",
   },
   {
     title: "Campaña #SéTuVoz",
@@ -379,52 +425,6 @@ export const projects: Project[] = [
     color: "from-rose-300/30 to-amber-300/30",
   },
   {
-    title: "Sonora Festival",
-    category: "Motion",
-    year: "2025",
-    client: "Sonora Producciones",
-    role: "Motion designer",
-    description:
-      "Identidad visual y piezas animadas para festival de música electrónica. Posters, reels, openers y contenido para pantallas LED del escenario.",
-    challenge:
-      "Crear una identidad que funcionara estática (afiches, redes) y en movimiento (LED, video) sin perder consistencia en escenarios complejos.",
-    solution:
-      "Diseñé un sistema generativo basado en formas líquidas reactivas al beat, animado en After Effects y exportado en loops perfectos para todas las plataformas.",
-    deliverables: ["Logo animado", "20+ posters", "12 reels promocionales", "Visuales para 3 escenarios LED"],
-    results: [
-      { value: "+8.000", label: "Asistentes" },
-      { value: "+500K", label: "Views en reels" },
-      { value: "3", label: "Escenarios" },
-      { value: "100%", label: "Sold out" },
-    ],
-    tags: ["After Effects", "Motion", "Posters", "VJ"],
-    image: motion,
-    color: "from-blue-500/30 to-purple-500/30",
-  },
-  {
-    title: "Lumière Outdoor",
-    category: "Publicidad",
-    year: "2025",
-    client: "Lumière Cosméticos",
-    role: "Dirección de arte",
-    description:
-      "Campaña publicitaria 360° para línea de cosméticos premium. Vallas, mupis, prensa, digital y POP para lanzamiento nacional en 8 ciudades.",
-    challenge:
-      "Posicionar una marca local como alternativa premium frente a referentes europeos, en una campaña con cobertura nacional y presupuesto controlado.",
-    solution:
-      "Concepto creativo 'Tu luz, tu firma': fotografía de producto con luz cinematográfica, claim emocional y un sistema de adaptaciones por ciudad y formato.",
-    deliverables: ["12 vallas + mupis", "Avisos de prensa", "Banners digitales", "POP para 80 puntos de venta"],
-    results: [
-      { value: "+72%", label: "Awareness marca" },
-      { value: "8", label: "Ciudades" },
-      { value: "+340%", label: "Tráfico web" },
-      { value: "1°", label: "Categoría premium" },
-    ],
-    tags: ["Publicidad", "OOH", "Dirección arte", "Campaña 360"],
-    image: publicidad,
-    color: "from-yellow-400/30 to-rose-500/30",
-  },
-  {
     title: "Acclie Fashion Store",
     category: "E-commerce",
     year: "2025",
@@ -469,29 +469,6 @@ export const projects: Project[] = [
     tags: ["Branding", "Evento", "Print", "Señalética"],
     image: evento,
     color: "from-rose-700/30 to-amber-400/30",
-  },
-  {
-    title: "Florare Ilustración",
-    category: "Ilustración",
-    year: "2025",
-    client: "Proyecto personal",
-    role: "Ilustradora",
-    description:
-      "Serie de 12 ilustraciones editoriales sobre mujeres y botánica, exploradas en lápiz de color digital y publicadas en libro auto-editado.",
-    challenge:
-      "Desarrollar una voz ilustrativa propia que pudiera ofrecerse comercialmente a editoriales y marcas de cuidado personal.",
-    solution:
-      "Trabajé sobre una paleta acotada coral/ocre, técnica mixta lápiz-acuarela digital y composiciones de retrato con elementos botánicos simbólicos.",
-    deliverables: ["12 ilustraciones originales", "Libro auto-editado 32pp", "Prints firmados serie limitada", "Portfolio para licenciamiento"],
-    results: [
-      { value: "+80", label: "Prints vendidos" },
-      { value: "3", label: "Encargos editoriales" },
-      { value: "12", label: "Ilustraciones" },
-      { value: "2", label: "Exposiciones" },
-    ],
-    tags: ["Ilustración", "Procreate", "Editorial", "Print"],
-    image: ilustracion,
-    color: "from-orange-300/30 to-rose-400/30",
   },
   {
     title: "Lóelido Fashion",
@@ -586,29 +563,6 @@ export const projects: Project[] = [
     color: "from-emerald-700/30 to-amber-400/30",
   },
   {
-    title: "Calma Wellness App",
-    category: "UI/UX",
-    year: "2024",
-    client: "Calma Studio",
-    role: "Diseño UI/UX",
-    description:
-      "App de meditación y bienestar con sesiones guiadas. Diseño UI cálido, sistema de gradientes lavanda y prototipo interactivo en Figma.",
-    challenge:
-      "Diferenciar una app de meditación frente a referentes globales, ofreciendo una experiencia más cálida, latina y menos clínica.",
-    solution:
-      "Lenguaje visual orgánico con gradientes suaves, ilustraciones abstractas y micro-animaciones que acompañan la respiración del usuario.",
-    deliverables: ["40+ pantallas", "Prototipo Figma", "Design system", "Guía de animaciones"],
-    results: [
-      { value: "9.4/10", label: "Rating UX test" },
-      { value: "40+", label: "Pantallas" },
-      { value: "8", label: "Usuarios test" },
-      { value: "1°", label: "Concurso UX local" },
-    ],
-    tags: ["Figma", "UI", "Wellness", "Mobile"],
-    image: app2,
-    color: "from-purple-300/30 to-rose-300/30",
-  },
-  {
     title: "Nexa Fintech",
     category: "UI/UX",
     year: "2025",
@@ -676,52 +630,6 @@ export const projects: Project[] = [
     tags: ["Packaging", "Foil", "Premium", "Artesanal"],
     image: packaging2,
     color: "from-amber-400/30 to-yellow-200/30",
-  },
-  {
-    title: "Documentary Title",
-    category: "Motion",
-    year: "2024",
-    client: "Estudio Independiente",
-    role: "Motion designer",
-    description:
-      "Secuencia de títulos animados para documental cinematográfico. Tipografía kinética, transiciones glitch y sonido sincronizado.",
-    challenge:
-      "Diseñar una secuencia que estableciera el tono crudo y nocturno del documental en menos de 90 segundos.",
-    solution:
-      "Tipografía kinética con efecto chromatic aberration, paleta teal-orange cinematográfica y transiciones sincronizadas a la banda sonora.",
-    deliverables: ["Opener 90s", "Lower thirds", "Cierre + créditos", "Versión sin texto para festivales"],
-    results: [
-      { value: "1", label: "Festival selección" },
-      { value: "+80K", label: "Views YouTube" },
-      { value: "90s", label: "Duración opener" },
-      { value: "5", label: "Lower thirds" },
-    ],
-    tags: ["After Effects", "Motion", "Cinema", "Titles"],
-    image: motion2,
-    color: "from-teal-500/30 to-orange-500/30",
-  },
-  {
-    title: "Strike Sneakers OOH",
-    category: "Publicidad",
-    year: "2025",
-    client: "Strike Sportwear",
-    role: "Dirección de arte",
-    description:
-      "Campaña outdoor para lanzamiento de zapatilla edición limitada. Vallas digitales en 5 ciudades + activación en redes.",
-    challenge:
-      "Generar deseo y conversación alrededor de un drop limitado de 2.000 unidades en menos de 2 semanas.",
-    solution:
-      "Concepto monocromo rojo intenso con producto centrado, claim de una sola palabra y cuenta regresiva integrada en vallas digitales.",
-    deliverables: ["12 vallas digitales", "Activación en RRSS", "Empaque del drop", "Landing del lanzamiento"],
-    results: [
-      { value: "Sold out", label: "En 36 hrs" },
-      { value: "5", label: "Ciudades" },
-      { value: "+450K", label: "Interacciones RRSS" },
-      { value: "+220%", label: "Tráfico web" },
-    ],
-    tags: ["OOH", "Campaña", "Sneakers", "Streetwear"],
-    image: publicidad2,
-    color: "from-red-500/30 to-pink-300/30",
   },
   {
     title: "Palenta Furniture Store",
