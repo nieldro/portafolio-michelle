@@ -1,7 +1,6 @@
 const items = [
   "Branding",
   "Editorial",
-  "Motion",
   "Packaging",
   "UI/UX",
   "Ilustración",

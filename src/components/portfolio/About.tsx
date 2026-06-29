@@ -1,15 +1,17 @@
-import avatar from "@/assets/laura-avatar.jpg";
+import avatarAsset from "@/assets/laura-foto.png.asset.json";
+
+const avatar = avatarAsset.url;
 
 const skills = [
   "Adobe Photoshop",
   "Illustrator",
   "InDesign",
-  "After Effects",
   "Premiere Pro",
-  "Figma",
+  "WordPress",
+  "CapCut Pro",
+  "PicsArt",
   "Affinity",
   "Canva Pro",
-  "CapCut Pro",
   "Maya 3D",
 ];
 
