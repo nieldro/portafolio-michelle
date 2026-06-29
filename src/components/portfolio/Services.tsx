@@ -1,4 +1,4 @@
-import { Palette, Layout, Sparkles, Layers, Smartphone, Package } from "lucide-react";
+import { Palette, Layout, Sparkles, Layers, Smartphone, Package, Pencil } from "lucide-react";
 
 const services = [
   {
@@ -17,9 +17,9 @@ const services = [
     desc: "Piezas para redes sociales, campañas multiplataforma y comunicación de marca con foco en engagement.",
   },
   {
-    icon: Sparkles,
-    title: "Motion Graphics",
-    desc: "Animaciones, transiciones y micro-interacciones que dan vida a las marcas.",
+    icon: Pencil,
+    title: "Ilustración",
+    desc: "Ilustraciones digitales editoriales, retratos y series temáticas con voz propia para marcas, libros y proyectos personales.",
   },
   {
     icon: Package,

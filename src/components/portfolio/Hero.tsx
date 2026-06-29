@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="max-w-5xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink text-ink-foreground text-xs font-semibold uppercase tracking-widest mb-8">
             <Sparkles className="w-3.5 h-3.5 text-accent" />
-            Diseñadora Visual & Gráfica · Bogotá
+            Diseñadora Visual · Bogotá
           </div>
 
           <h1 className="font-display font-black text-5xl sm:text-7xl lg:text-8xl leading-[0.95] mb-8">
@@ -45,7 +45,7 @@ export const Hero = () => {
           <div className="mt-20 grid grid-cols-3 gap-6 max-w-2xl">
             {[
               { n: "30+", l: "Proyectos entregados" },
-              { n: "4+", l: "Años de experiencia" },
+              { n: "2+", l: "Años de experiencia" },
               { n: "15+", l: "Marcas potenciadas" },
             ].map((s) => (
               <div key={s.l}>

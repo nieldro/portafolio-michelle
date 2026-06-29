@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -48,18 +48,6 @@ export const Contact = () => {
                 >
                   <Phone className="w-5 h-5 text-accent" />
                   <span className="flex-1 font-medium">+57 310 751 5056</span>
-                  <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/laura-michelle-herrera-bedoya-769337407"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 rounded-2xl border border-ink-foreground/10 hover:border-primary hover:bg-ink-foreground/5 transition-all"
-                >
-                  <Linkedin className="w-5 h-5 text-accent" />
-                  <span className="flex-1 font-medium">LinkedIn</span>
                   <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
