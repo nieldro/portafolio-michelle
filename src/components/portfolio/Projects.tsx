@@ -694,7 +694,7 @@ export const projects: Project[] = [
   },
 ];
 
-const categories = ["Todos", "Branding", "Editorial", "UI/UX", "E-commerce", "Publicidad", "Packaging", "Motion", "Social Media", "Evento", "Ilustración"];
+const categories = ["Todos", "Branding", "Editorial", "UI/UX", "E-commerce", "Publicidad", "Packaging", "Social Media", "Evento", "Ilustración"];
 
 export const Projects = () => {
   const [filter, setFilter] = useState("Todos");
