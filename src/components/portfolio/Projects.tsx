@@ -34,6 +34,10 @@ const kaomiArcana = "/__l5e/assets-v1/a5acd706-c52c-4bc2-ad8a-34476ddec589/empaq
 const taironsVodka = "/__l5e/assets-v1/222989f6-7207-4ec4-a1cf-2303f20150ed/empaque-02.png";
 const ecoVidaFolleto = "/__l5e/assets-v1/234e8b81-105f-495b-9eac-c4b5795fbb8b/folleto-02-page-1.jpg";
 const ferrari288Poster = "/__l5e/assets-v1/42b1cd0d-03f6-46d1-881d-a58963aeb194/poster-01-page-1.jpg";
+const papeleriaKaomi = "/__l5e/assets-v1/f8f71292-db19-4820-ac31-0d5b6606470f/papeleria-01.png";
+const papeleriaAstral = "/__l5e/assets-v1/6a4bc4f0-f0a1-4b1c-9974-25f772aa6037/papeleria-02.png";
+const algoquestImg = "/__l5e/assets-v1/921f4d75-701a-4282-b613-f586de5bb934/algoquest.png";
+const valorantImg = "/__l5e/assets-v1/d6553cf6-52ef-4bef-bae6-65d9d19bffcb/valorant-web.png";
 
 export type Project = {
   title: string;
