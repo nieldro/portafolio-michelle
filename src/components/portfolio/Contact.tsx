@@ -37,7 +37,7 @@ export const Contact = () => {
                   className="group flex items-center gap-4 p-4 rounded-2xl border border-ink-foreground/10 hover:border-primary hover:bg-ink-foreground/5 transition-all"
                 >
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="flex-1 font-medium">michelherrera0819@gmail.com</span>
+                  <span className="flex-1 font-medium text-sm sm:text-base break-all">michelherrera0819@gmail.com</span>
                   <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
