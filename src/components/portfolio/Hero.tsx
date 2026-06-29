@@ -14,7 +14,7 @@ export const Hero = () => {
             Diseñadora Visual · Bogotá
           </div>
 
-          <h1 className="font-display font-black text-5xl sm:text-7xl lg:text-8xl leading-[0.95] mb-8">
+          <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl leading-[1] mb-8 break-words">
             Diseño con <em className="not-italic text-gradient">color</em>,
             <br />
             estrategia <span className="italic font-light">y</span> alma.

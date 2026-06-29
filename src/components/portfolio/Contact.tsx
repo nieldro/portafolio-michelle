@@ -60,7 +60,7 @@ export const Contact = () => {
 
           <form
             onSubmit={submit}
-            className="bg-background text-foreground p-8 sm:p-10 rounded-3xl shadow-bold space-y-5"
+            className="bg-background text-foreground p-6 sm:p-10 rounded-3xl shadow-bold space-y-5 w-full min-w-0"
           >
             <h3 className="font-display text-2xl font-bold">Cuéntame de tu proyecto</h3>
             <div>
